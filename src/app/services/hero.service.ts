@@ -3,9 +3,7 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Hero } from './hero';
-import * as _ from 'lodash';
-import * as moment from 'moment';
+import { Hero } from '../entity/hero';
 
 @Injectable()
 export class HeroService {
@@ -30,7 +28,8 @@ export class HeroService {
   }
 
   getHeroes(): Promise<Hero[]> {
-    return this.http.get(this.heroesUrl)
+    const url = this.heroesUrl;
+    return this.http.get(url)
       .toPromise()
       .then(response => response.json().data as Hero[])
       .catch(this.handleError);

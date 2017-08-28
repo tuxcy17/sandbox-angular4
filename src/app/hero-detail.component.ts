@@ -3,9 +3,9 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
-import { Hero } from './hero';
+import { Hero } from './entity/hero';
 
-import { HeroService } from './hero.service';
+import { HeroService } from './services/hero.service';
 
 @Component({
   selector: 'hero-detail',

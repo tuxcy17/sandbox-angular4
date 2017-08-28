@@ -14,6 +14,10 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 19, name: 'Magma' },
       { id: 20, name: 'Tornado' }
     ];
-    return {heroes};
+    const pois = [
+      {id: 0, name: 'koyama', type: 'POI_TYPE_RESTAURANT', keywords: ['sushi', 'japonais', 'saumon' ], geojson: ''}
+    ];
+
+    return {heroes, pois};
   }
 }
