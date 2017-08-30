@@ -17,7 +17,7 @@ export class MongoConnectionService {
     this.db.on('error', console.error.bind(console, 'MongoDB connection error:'));
   }
 
-  static getInstance(): MongoConnectionService {
+  static getInstance() {
     if (!MongoConnectionService.instance) {
       MongoConnectionService.instance = new MongoConnectionService();
     }

@@ -1,4 +1,4 @@
-import {Hero} from '../models/hero';
+import {IHeroModel, HeroModel} from '../models/hero';
 
 export class HeroesService {
   private static instance: HeroesService;
@@ -13,7 +13,7 @@ export class HeroesService {
     return HeroesService.instance;
   }
 
-  public getNewHero(name: string): Hero {
-    return new Hero({name: name});
+  public getNewHero(name: string): IHeroModel {
+    return new HeroModel({name: name});
   }
 }
